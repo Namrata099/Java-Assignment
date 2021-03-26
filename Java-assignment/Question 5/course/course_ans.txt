@@ -1,0 +1,66 @@
+Given Code -------->
+
+		public class Course{
+			public String courseId;  
+			public String courseTitle;
+			private String courseInstructor;
+			
+			public Course(){
+				
+			}
+			
+			getCourseInstructor(){return courseInstructor;}
+			
+			static int noOfInstructors;
+			
+		}
+
+
+		
+NOTE: To make the above class encapsulated we need to change the access specifiers of variables to from public to private.
+      Also need to generate their respective getters and setters.
+
+Code after encapsulation --------->
+
+package com.course;
+
+public class Course {
+	
+	private String courseId;
+	private String courseTitle;
+	private String courseInstructor;
+	
+	public String getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
+	}
+
+	public String getCourseTitle() {
+		return courseTitle;
+	}
+
+	public void setCourseTitle(String courseTitle) {
+		this.courseTitle = courseTitle;
+	}
+
+	public static int getNoOfInstructors() {
+		return noOfInstructors;
+	}
+
+	public static void setNoOfInstructors(int noOfInstructors) {
+		Course.noOfInstructors = noOfInstructors;
+	}
+
+	public String getCourseInstructor() {
+		return courseInstructor;
+	}
+
+	public void setCourseInstructor(String courseInstructor) {
+		this.courseInstructor = courseInstructor;
+	}
+	
+	private static int noOfInstructors;
+}
